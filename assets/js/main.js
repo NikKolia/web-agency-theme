@@ -20,9 +20,9 @@
 
 		})
 
-	/**********************************************************
-	* Mobile Menu - Responsive Navigation for WordPress menus *
-	 *********************************************************/
+	/**--------------------------------------------------------------
+	 # Responsive Navigation for WordPress menus
+	 --------------------------------------------------------------*/
 	$.fn.responsiveMenu = function( options ) {
 
 		if (options === undefined) options = {};
@@ -123,11 +123,12 @@
 			menuID: "mainnav-menu",
 			toggleID: "mainnav-toggle",
 			toggleClass: "nav-toggle",
-			toggleText: "Menu",
+			toggleText: "Навигация",
 			maxWidth: "991px"
 		});
 
 	} );
+
 
 	/*----------------------------------------------------*/
 	/* Smooth Scrolling
