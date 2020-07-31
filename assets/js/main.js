@@ -123,7 +123,7 @@
 			menuID: "mainnav-menu",
 			toggleID: "mainnav-toggle",
 			toggleClass: "nav-toggle",
-			toggleText: "Навигация",
+			toggleText: "Navigation",
 			maxWidth: "991px"
 		});
 

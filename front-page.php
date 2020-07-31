@@ -164,10 +164,10 @@
 
     <!-- intro section
     ================================================== -->
-    <section id="intro">
+    <section id="intro" class="uk-animation-fade" uk-parallax="blur: 10">
         <div class="content">
-            <div class="row section-intro">
-                <div class="col-twelve">
+            <div class="row section-intro" uk-scrollspy="cls: uk-animation-scale-up; target: .uk-card; delay: 500; repeat: true">
+                <div class="col-twelve uk-card uk-card-body">
                     <h1>BRINGING NEW BUSINESS TO YOUR BUSINESS</h1>
                     <h2>LOS ANGELES WEB DESIGN & INTERNET MARKETING</h2>
                 </div>
@@ -181,10 +181,10 @@
     ================================================== -->
     <section id="second">
         <div class="row section-intro">
-            <div class="col-twelve">
+            <div class="col-twelve" uk-scrollspy="cls: uk-animation-slide-left; repeat: false">
                 <h2>HOW WE HELP YOU GENERATE BUSINESS ONLINE</h2>
             </div>
-            <div class="col-twelve">
+            <div class="col-twelve" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
                 <p>Established 1984 <i class="fa fa-star" aria-hidden="true"></i> 36 Years Experience in Software
                     Development <i class="fa fa-star" aria-hidden="true"></i> 20 years Experience in Web Design /
                     Development</p>
@@ -201,7 +201,7 @@
     <section id="features">
         <div class="row">
             <div class="block-1-3 block-tab-full group">
-                <div class="bgrid">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-1.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -214,7 +214,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-1 Custom web Desing -->
-                <div class="bgrid">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-3.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -226,7 +226,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-3 Why choose us-->
-                <div class="bgrid">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-6.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -238,7 +238,7 @@
                 <!-- /bgrid-6 Seo-->
 
 
-                <div class="bgrid">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-4.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -249,7 +249,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-4 Respo website-->
-                <div class="bgrid">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-5.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -258,7 +258,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-5 Seo content wr-->
-                <div class="bgrid">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-2.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -298,22 +298,22 @@
     <section id="services">
         <div class="row">
             <div class="block-1-3 block-tab-full group">
-                <div class="bgrid">
+                <div class="bgrid uk-animation-toggle" uk-scrollspy="cls:uk-animation-fade; repeat: true" tabindex="0">
                     <h5>SEO Content Writing</h5>
                     <p>Our marketing team writes brilliant content that sets your product apart from others.</p>
-                    <a class="button" href="#">Learn More</a>
+                    <a class="button uk-animation-shake" href="#">Learn More</a>
                 </div>
                 <!-- /bgrid-1 -->
-                <div class="bgrid">
+                <div class="bgrid uk-animation-toggle" uk-scrollspy="cls:uk-animation-fade; repeat: true" tabindex="0">
                     <h5>Grab Your Visitors</h5>
                     <p>Material that grabs the attention of your visitors within seconds.</p>
-                    <a class="button" href="#">Learn More</a>
+                    <a class="button uk-animation-shake" href="#">Learn More</a>
                 </div>
                 <!-- /bgrid-2 -->
-                <div class="bgrid">
+                <div class="bgrid uk-animation-toggle" uk-scrollspy="cls:uk-animation-fade; repeat: true" tabindex="0">
                     <h5>Search Engine Visibility</h5>
                     <p>Your website needs to be visible on the search engine search results to generate business.</p>
-                    <a class="button" href="#">Learn More</a>
+                    <a class="button uk-animation-shake" href="#">Learn More</a>
                 </div>
                 <!-- /bgrid-3 -->
             </div>
@@ -326,9 +326,9 @@
     ================================================== -->
     <section id="cta">
         <div class="row">
-            <div class="col-twelve">
+            <div class="col-twelve uk-animation-toggle" uk-scrollspy="cls:uk-animation-shake; repeat: true" tabindex="0">
                 <h2>Start growing your business online today</h2>
-                <a class="button" href="#">Contact Us</a>
+                <a class="button uk-animation-shake" href="#">Contact Us</a>
             </div>
         </div>
     </section>
@@ -338,39 +338,33 @@
     <section id="cta">
         <div class="row">
             <div class="col-twelve">
-                <h2>Blog</h2>
-                <article>
+                <h2 uk-scrollspy="cls: uk-animation-scale-up; repeat: true">Blog</h2>
+                <?php
+                global $post;
+                $args = array(
+                    'numberposts' => 3,
+                    'post_type' => 'articles',
+                    'publish' => true
+                );
+                $page_posts = get_posts($args);
+                foreach ($page_posts as $post) {
+                    ?>
+                    <div class="col-md-4 blogGrig">
 
-                    <?php // Display blog posts
-                    $temp = $wp_query;
-                    $wp_query = null;
-                    $wp_query = new WP_Query();
-                    $wp_query->query('showposts=5' . '&paged=' . $paged);
-                    while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-
-                        <h3><a href="<?php the_permalink(); ?>" title="Read more"><?php the_title(); ?></a></h3>
+                        <div>
+                            <?php echo get_the_post_thumbnail(get_the_ID(), 'article-image'); ?>
+                        </div>
+                        <div class="line">
+                            <hr/>
+                        </div>
+                        <a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
                         <?php the_excerpt(); ?>
 
-                    <?php endwhile; ?>
-
-                    <?php if ($paged > 1) { ?>
-
-                        <nav id="nav-posts">
-                            <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
-                            <div class="next"><?php previous_posts_link('Newer Posts &raquo;'); ?></div>
-                        </nav>
-
-                    <?php } else { ?>
-
-                        <nav id="nav-posts">
-                            <div class="prev"><?php next_posts_link('&laquo; Previous Posts'); ?></div>
-                        </nav>
-
-                    <?php } ?>
-
-                    <?php wp_reset_postdata(); ?>
-
-                </article>
+                    </div><!-- /.col-md -->
+                    <?php
+                }
+                wp_reset_postdata();
+                ?>
             </div>
         </div>
     </section>
