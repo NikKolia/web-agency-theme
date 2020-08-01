@@ -3,19 +3,24 @@
 <footer>
 	<div class="container-fluid">
 		<div class="row">
-            <div class="col-4">
-                <?php if ( is_active_sidebar( 'footer-left' ) ) : ?>
-                    <?php dynamic_sidebar( 'footer-left' ); ?>
+            <div class="col-3">
+                <?php if ( is_active_sidebar( 'footer-first' ) ) : ?>
+                    <?php dynamic_sidebar( 'footer-first' ); ?>
                 <?php endif; ?>
             </div>
-            <div class="col-4">
-                <?php if ( is_active_sidebar( 'footer-center' ) ) : ?>
-                    <?php dynamic_sidebar( 'footer-center' ); ?>
+            <div class="col-3">
+                <?php if ( is_active_sidebar( 'footer-second' ) ) : ?>
+                    <?php dynamic_sidebar( 'footer-second' ); ?>
                 <?php endif; ?>
             </div>
-            <div class="col-4">
-                <?php if ( is_active_sidebar( 'footer-right' ) ) : ?>
-                    <?php dynamic_sidebar( 'footer-right' ); ?>
+            <div class="col-3">
+                <?php if ( is_active_sidebar( 'footer-third' ) ) : ?>
+                    <?php dynamic_sidebar( 'footer-third' ); ?>
+                <?php endif; ?>
+            </div>
+            <div class="col-3">
+                <?php if ( is_active_sidebar( 'footer-fourth' ) ) : ?>
+                    <?php dynamic_sidebar( 'footer-fourth' ); ?>
                 <?php endif; ?>
             </div>
 		</div>

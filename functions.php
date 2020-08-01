@@ -54,6 +54,7 @@ function create_post_type() {
         'has_archive' => true,
         'menu_position' => null,
         'hierarchical' => false,
+        'taxonomies' => array('post_tag'),
         'supports' => array(
             'title',
             'editor',
@@ -70,27 +71,36 @@ if (function_exists('add_image_size')) {
 
 function my_register_sidebars() {
     register_sidebar( array(
-        'name' => esc_html__( 'Footer left', 'nd_dosth' ),
-        'id' => 'footer-left',
-        'description'   => esc_html__( 'Widgets added here would appear inside the left section of the footer', 'nd_dosth' ),
+        'name' => esc_html__( 'Footer first', 'nd_dosth' ),
+        'id' => 'footer-first',
+        'description'   => esc_html__( 'Widgets added here would appear inside the first section of the footer', 'nd_dosth' ),
         'before_widget' => '<aside id="%1$s" class="selfWidget1">',
         'after_widget' => '</aside>',
         'before_title' => '<p class="widget-title">',
         'after_title' => '</p>',
     ));
     register_sidebar( array(
-        'name' => esc_html__( 'Footer center', 'nd_dosth' ),
-        'id' => 'footer-center',
-        'description'   => esc_html__( 'Widgets added here would appear inside the center section of the footer', 'nd_dosth' ),
+        'name' => esc_html__( 'Footer second', 'nd_dosth' ),
+        'id' => 'footer-second',
+        'description'   => esc_html__( 'Widgets added here would appear inside the second section of the footer', 'nd_dosth' ),
         'before_widget' => '<aside id="%1$s" class="selfWidget2">',
         'after_widget' => '</aside>',
         'before_title' => '<p class="widget-title">',
         'after_title' => '</p>',
     ));
     register_sidebar( array(
-        'name' => esc_html__( 'Footer right', 'nd_dosth' ),
-        'id' => 'footer-right',
-        'description'   => esc_html__( 'Widgets added here would appear inside the right section of the footer', 'nd_dosth' ),
+        'name' => esc_html__( 'Footer third', 'nd_dosth' ),
+        'id' => 'footer-third',
+        'description'   => esc_html__( 'Widgets added here would appear inside the third section of the footer', 'nd_dosth' ),
+        'before_widget' => '<aside id="%1$s" class="selfWidget3">',
+        'after_widget' => '</aside>',
+        'before_title' => '<p class="widget-title">',
+        'after_title' => '</p>',
+    ));
+    register_sidebar( array(
+        'name' => esc_html__( 'Footer fourth', 'nd_dosth' ),
+        'id' => 'footer-fourth',
+        'description'   => esc_html__( 'Widgets added here would appear inside the fourth section of the footer', 'nd_dosth' ),
         'before_widget' => '<aside id="%1$s" class="selfWidget3">',
         'after_widget' => '</aside>',
         'before_title' => '<p class="widget-title">',
