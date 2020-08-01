@@ -3,163 +3,9 @@
     <!-- Local page styles
     ================================================== -->
     <style>
-        /**
-         * ===================================================================
-         * 1. intro section
-         * -------------------------------------------------------------------
-         */
         #intro {
             background: url(<?php echo get_template_directory_uri(); ?>/assets/images/intro-bg.jpg) no-repeat center;
-            background-size: cover;
-            -moz-background-size: cover;
-            -webkit-background-size: cover;
-            width: 100%;
-            height: 90%;
-            min-height: 640px;
-            display: table;
-            padding: 0;
-            position: relative;
         }
-
-        #intro .content {
-            background: rgba(0, 0, 0, 0.5);
-            top: 30%;
-            width: 100%;
-            vertical-align: middle;
-            padding: 12rem 0;
-            position: absolute;
-        }
-
-        #intro .content h1 {
-            color: #fff;
-            font-weight: bolder;
-        }
-
-        #intro .content h2 {
-            color: #fff;
-            margin-bottom: 0;
-        }
-
-        /**
-         * responsive:
-         * intro
-         * -------------------------------------------------------------------
-         */
-        @media only screen and (max-width: 1024px) {
-            .intro-content {
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                transform: translateY(0);
-            }
-        }
-
-        @media only screen and (max-width: 768px) {
-            #intro {
-                min-height: 660px;
-            }
-        }
-
-        @media only screen and (max-width: 600px) {
-            #intro {
-                min-height: 600px;
-            }
-        }
-
-        @media only screen and (max-width: 400px) {
-            #intro {
-                min-height: 550px;
-            }
-        }
-
-
-        /**
-         * ===================================================================
-         * 2. second section
-         * -------------------------------------------------------------------
-         */
-        section#second {
-            background: #f6f8f7;
-            border-bottom: 1px solid #7eced5;
-            padding-bottom: 5rem;
-            padding-top: 6rem;
-        }
-
-        /**
-         * ===================================================================
-         * 3. process section
-         * -------------------------------------------------------------------
-         */
-        #features {
-            background: #fff;
-            padding-bottom: 7rem;
-        }
-
-        #features .img {
-            float: left;
-            width: 30%;
-        }
-
-        #features .text {
-            float: right;
-            width: 70%;
-        }
-
-        #features .bgrid {
-            padding: 0 20px;
-        }
-
-        #features h5 {
-            font-family: Georgia, serif;
-            font-weight: bold;
-            text-transform: none;
-            line-height: 2.6rem;
-            margin-bottom: 0.4rem;
-        }
-
-        #features sub {
-            bottom: 0;
-            font-size: 1.4rem;
-            margin-bottom: 0.4rem;
-        }
-
-        #features p {
-            line-height: 2.6rem;
-        }
-
-
-        /**
-         * ===================================================================
-         * 4. portfolio section
-         * -------------------------------------------------------------------
-         */
-        #portfolio {
-            background: #252124;
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        #portfolio h2 {
-            color: #fff;
-            margin-bottom: 2rem;
-        }
-
-        /**
-         * ===================================================================
-         * 5. services
-         * -------------------------------------------------------------------
-         */
-        #services {
-            padding-bottom: 5rem;
-        }
-
-        #services .bgrid {
-            margin-bottom: 5rem;
-        }
-
     </style>
 
     <!-- intro section
@@ -201,7 +47,7 @@
     <section id="features">
         <div class="row">
             <div class="block-1-3 block-tab-full group">
-                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: false">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-1.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -214,7 +60,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-1 Custom web Desing -->
-                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: false">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-3.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -226,7 +72,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-3 Why choose us-->
-                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: false">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-6.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -238,7 +84,7 @@
                 <!-- /bgrid-6 Seo-->
 
 
-                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: false">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-4.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -249,7 +95,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-4 Respo website-->
-                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: false">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-5.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -258,7 +104,7 @@
                     </div>
                 </div>
                 <!-- /bgrid-5 Seo content wr-->
-                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: true">
+                <div class="bgrid" uk-scrollspy="cls:uk-animation-fade; repeat: false">
                     <div class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img-2.png"
                                           alt="" title=""></div>
                     <div class="text">
@@ -325,8 +171,8 @@
     <!-- cta section
     ================================================== -->
     <section id="cta">
-        <div class="row">
-            <div class="col-twelve uk-animation-toggle" uk-scrollspy="cls:uk-animation-shake; repeat: true" tabindex="0">
+        <div class="row uk-animation-toggle" uk-scrollspy="cls: uk-animation-scale-up; repeat: true">
+            <div class="col-twelve">
                 <h2>Start growing your business online today</h2>
                 <a class="button uk-animation-shake" href="#">Contact Us</a>
             </div>

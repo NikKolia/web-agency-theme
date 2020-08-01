@@ -17,9 +17,11 @@ function computaid_js() {
     wp_enqueue_script( 'uikit-icons', get_template_directory_uri() . '/assets/js/uikit-icons.min.js', array('jquery'), null, true);
 }
 
-add_theme_support( 'custom-logo');
+add_theme_support('title-tag');
+add_theme_support('post-thumbnails');
 add_theme_support( 'widgets' );
 add_filter('widget_text', 'do_shortcode');
+// add_theme_support( 'custom-logo');
 
 // Register menu
 register_nav_menus( array(
