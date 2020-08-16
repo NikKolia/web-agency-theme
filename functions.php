@@ -101,7 +101,16 @@ function my_register_sidebars() {
         'name' => esc_html__( 'Footer fourth', 'nd_dosth' ),
         'id' => 'footer-fourth',
         'description'   => esc_html__( 'Widgets added here would appear inside the fourth section of the footer', 'nd_dosth' ),
-        'before_widget' => '<aside id="%1$s" class="selfWidget3">',
+        'before_widget' => '<aside id="%1$s" class="selfWidget4">',
+        'after_widget' => '</aside>',
+        'before_title' => '<p class="widget-title">',
+        'after_title' => '</p>',
+    ));
+    register_sidebar( array(
+        'name' => esc_html__( 'Footer fifth', 'nd_dosth' ),
+        'id' => 'footer-fifth',
+        'description'   => esc_html__( 'Widgets added here would appear inside the fifth section of the footer', 'nd_dosth' ),
+        'before_widget' => '<aside id="%1$s" class="selfWidget5">',
         'after_widget' => '</aside>',
         'before_title' => '<p class="widget-title">',
         'after_title' => '</p>',

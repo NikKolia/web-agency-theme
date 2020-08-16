@@ -6,7 +6,7 @@
  * -------------------------------------------------------------------
  */
 /**
- * Front page styles 
+ * Front page styles
  * ===================================================================
  * 1. intro section
  * -------------------------------------------------------------------
@@ -2165,6 +2165,26 @@ html[xmlns] .flexslider .slides {
   padding: 0 5px;
 }
 
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-facebook:hover, .fa-youtube:hover, .fa-twitter:hover, .fa-linkedin:hover {
+  color: #ffffff;
+}
+
+.fa-youtube {
+  color: #e62117;
+}
+
+.fa-twitter {
+  color: #41abe1;
+}
+
+.fa-linkedin {
+  color: #0073b0;
+}
+
 .top-nav {
   background-color: #000000;
 }
@@ -2178,6 +2198,10 @@ html[xmlns] .flexslider .slides {
 
 #mainnav-menu .menu-item-has-children .submenu-dropdown-toggle:after {
   top: 1.7em !important;
+}
+
+#mainnav-toggle {
+  padding-top: 5px;
 }
 
 .line {
@@ -2198,6 +2222,39 @@ html[xmlns] .flexslider .slides {
   text-align: left;
 }
 
+.selfWidget2 a:hover, .selfWidget3 a:hover, .selfWidget4 a:hover, .selfWidget5 a:hover, .copyright a:hover, .yell a:hover, #features a:hover {
+  text-decoration: none;
+}
+
+.yell a:hover, #features a:hover {
+  color: #000000;
+}
+
+.main-navigation-menu li a:hover {
+  color: #ff2d55 !important;
+}
+
+@media (max-width: 1320px) {
+  #mainnav-menu a {
+    padding-left: 5px !important;
+  }
+}
+@media (max-width: 1135px) {
+  #mainnav-menu a {
+    font-size: 0.9em !important;
+  }
+}
+@media (max-width: 1035px) {
+  #mainnav-menu a:last-child {
+    padding-right: 10px;
+  }
+}
+@media (max-width: 991px) {
+  #mainnav-menu a {
+    padding: 1em 1.4em !important;
+    font-size: 1em !important;
+  }
+}
 @media (max-width: 767px) {
   header .logo a {
     margin: 0 auto;

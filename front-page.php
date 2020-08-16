@@ -12,7 +12,8 @@
     ================================================== -->
     <section id="intro" class="uk-animation-fade" uk-parallax="blur: 10">
         <div class="content">
-            <div class="row section-intro" uk-scrollspy="cls: uk-animation-scale-up; target: .uk-card; delay: 500; repeat: true">
+            <div class="row section-intro"
+                 uk-scrollspy="cls: uk-animation-scale-up; target: .uk-card; delay: 500; repeat: true">
                 <div class="col-twelve uk-card uk-card-body">
                     <h1>BRINGING NEW BUSINESS TO YOUR BUSINESS</h1>
                     <h2>LOS ANGELES WEB DESIGN & INTERNET MARKETING</h2>
@@ -32,9 +33,8 @@
             </div>
             <div class="col-twelve" uk-scrollspy="cls: uk-animation-slide-right; repeat: false">
                 <p>Established 1984 <i class="fa fa-star" aria-hidden="true"></i> 36 Years Experience in Software
-                    Development <i class="fa fa-star" aria-hidden="true"></i> 20 years Experience in Web Design /
-                    Development</p>
-                <p><i class="fa fa-star" aria-hidden="true"></i> 15 Years Experience in SEO</p>
+                    Development <i class="fa fa-star" aria-hidden="true"></i> 23 years Experience in Web Design / Development</p>
+                <p><i class="fa fa-star" aria-hidden="true"></i> 17 Years Experience in SEO</p>
                 <p><i class="fa fa-star" aria-hidden="true"></i>We have helped our clients generate millions of dollars
                 </p>
             </div>
@@ -146,7 +146,8 @@
             <div class="block-1-3 block-tab-full group">
                 <div class="bgrid uk-animation-toggle" uk-scrollspy="cls:uk-animation-fade; repeat: true" tabindex="0">
                     <h5>SEO Content Writing</h5>
-                    <p>Our marketing team writes brilliant content that sets your product apart from others.</p>
+                    <p>Our marketing team writes brilliant content that ranks you at the top of the search engines and
+                        sets your product apart from others.</p>
                     <a class="button uk-animation-shake" href="#">Learn More</a>
                 </div>
                 <!-- /bgrid-1 -->
@@ -173,47 +174,34 @@
     <section id="cta">
         <div class="row uk-animation-toggle" uk-scrollspy="cls: uk-animation-scale-up; repeat: true">
             <div class="col-twelve">
+                <p class="text">O yes, our web-savvy team will provide Web Design that is beautiful&#8230;<br/>
+                    <strong><u><font color="#990000">Web Design</font></u></strong> customized to your every need&#8230;<br/>
+                    <strong><u><font color="#990000">Web Design</font></u></strong> that&#8217;s affordable&#8230;<br/>
+                    <strong><u><font color="#990000">Web Design</font></u></strong> with images that inspire&#8230;
+                    <br/>
+                    <strong><font color="#990000"><u>Website Design</u></font></strong> that&#8217;s easy to navigate&#8230;<br/>
+                    <strong><font color="#990000"><u>Website Design</u></font></strong> with copy that sells&#8230; </p>
+                <p>But in addition&#8230; </p>
+                <p> A leading Santa Monica based search engine optimizing <font color="#990000"><u>website
+                            design</u></font> company serving Los Angeles, Santa Monica, and indeed, the World,
+                    COMPUTAID will give you something more&#8230; </p>
+                <p> YOUR PERFECT CUSTOMER &#8211; THE ONE WHO IS SEARCHING FOR YOUR PRODUCT OR SERVICE &#8211; DELIVERED
+                    TO YOUR WEBSITE ON A SILVER PLATTER&#8230; BECAUSE YOUR WEBSITE IS SO EASY TO FIND! </p>
+                <p> We can help drive your website to the top ranks, maximizing your visibility no matter which search
+                    engine your clients use. Our wonderful Los Angeles <font color="#990000"><u>Web Design</u></font>
+                    Team really knows its way around the ins and outs of <u>website design</u> and search engine
+                    optimization. </p>
+                <p> We&#8217;ll deliver your <font color="#990000"><u>Website Design</u></font> on time and within
+                    budget, with friendly informative service all through the process. And we&#8217;ll be there after
+                    you launch your website, to enhance, improve, update, or troubleshoot. So you can be sure your
+                    website will continue to deliver the customers you seek, because&#8230; </p>
+                <p><strong>YOUR WEBSITE IS DESIGNED WITH SEARCH ENGINES IN MIND.</strong></p>
+                <p>LET COMPUTAID BE YOUR WEBSITE DESIGN FIRM AND SEARCH ENGINEERS!</p>
                 <h2>Start growing your business online today</h2>
                 <a class="button uk-animation-shake" href="#">Contact Us</a>
             </div>
         </div>
     </section>
     <!-- /cta -->
-    <!-- blog
-    ================================================= -->
-    <section id="cta">
-        <div class="row">
-            <div class="col-twelve">
-                <h2 uk-scrollspy="cls: uk-animation-scale-up; repeat: true">Blog</h2>
-                <?php
-                global $post;
-                $args = array(
-                    'numberposts' => 3,
-                    'post_type' => 'articles',
-                    'publish' => true
-                );
-                $page_posts = get_posts($args);
-                foreach ($page_posts as $post) {
-                    ?>
-                    <div class="col-md-4 blogGrig">
-
-                        <div>
-                            <?php echo get_the_post_thumbnail(get_the_ID(), 'article-image'); ?>
-                        </div>
-                        <div class="line">
-                            <hr/>
-                        </div>
-                        <a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-                        <?php the_excerpt(); ?>
-
-                    </div><!-- /.col-md -->
-                    <?php
-                }
-                wp_reset_postdata();
-                ?>
-            </div>
-        </div>
-    </section>
-    <!-- /blog -->
 
 <?php get_footer(); ?>
